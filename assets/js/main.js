@@ -40,6 +40,7 @@ const generateDivColor = () => {
     // console.log(rgb);
     // console.log(value);
     rightDiv = divRandomNum();
+    console.log(rightDiv);
     divArr.forEach((div, i) => {
         let color = 0
         if (rightDiv != i) {
@@ -65,18 +66,20 @@ for(let div of divArr) {
     div.addEventListener("click", (event) => {
         console.log(event.target.style.background);
         if (event.target.style.background != rgbValue) {
-            output.style.display = "block"
+            // output.style.display = "block"
             output.innerText = "Das war leider die falsche Farbe. Bitte drücke Reset und versuche es erneut."
             console.log("Falsch");
         } else {
             output.innerText = "Du bist ein RGB Genie"
-            output.style.display = "block"
+            // output.style.display = "block"
             console.log("Richtig");
         }
     })
 }
 
 function resetMe() {
-    getColor();
-    generateDivColor();
+    // getColor();
+    // generateDivColor();
+    // output.innerText = null;
+    location.reload();
 }
