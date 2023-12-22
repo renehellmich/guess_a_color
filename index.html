@@ -4,10 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guess a Color</title>
+    <style>
+
+        .section__color {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 32px
+        }
+        .div__color {
+            height: 64px;
+            width: 64px;
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
-    
+    <p style="font-weight: bold; text-align: center;">Guess what color rgb(<span id="span_color"></span>, <span id="span_color"></span>, <span id="span_color"></span>) is:<p>
 
+    <form action="#" onsubmit="resetMe()">
+        <section class="section__color">
+            <div class="div__color"></div>
+            <div class="div__color"></div>
+            <div class="div__color"></div>
+            <div class="div__color"></div>
+            <div class="div__color"></div>
+        </section>
+        <button type="submit" id="buttonSubmit">Reset Me</button>
+    </form>
+    <p style="display: none;" id="output">Das stimmt leider nicht. Bitte versuche es nochmal.</p>
     <script src="./assets/js/main.js"></script>
 </body>
 </html>
