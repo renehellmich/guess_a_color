@@ -18,6 +18,13 @@
             width: 64px;
             border: 1px solid black;
         }
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 32px
+        }
     </style>
 </head>
 <body>
@@ -33,7 +40,7 @@
         </section>
         <button type="submit" id="buttonSubmit">Reset Me</button>
     </form>
-    <p style="display: none;" id="output">Das stimmt leider nicht. Bitte versuche es nochmal.</p>
+    <p id="output" style="text-align: center;"></p>
     <script src="./assets/js/main.js"></script>
 </body>
 </html>
